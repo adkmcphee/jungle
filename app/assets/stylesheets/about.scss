@@ -1,0 +1,55 @@
+// Place all the styles related to the About controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+// Vendor
+// @import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+// App
+@import "products";
+
+// Fonts
+// Global
+body {
+  font-size: 20px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.about-page {
+  padding: 3em 0;
+  text-align: center;
+}
+
+.jumbotron {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 2em;
+}
+
+.jumbotron h1.display-4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+.jumbotron p.lead {
+  font-size: 1.5em;
+}
+
+.container {
+  margin-top: 3em;
+}
+
+.section-heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.section-description {
+  font-size: 1.2em;
+}
