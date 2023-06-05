@@ -61,4 +61,36 @@ RSpec.describe User, type: :model do
       expect(user.errors[:last_name]).to_not be_empty
     end
   end
+
+  describe '.authenticate_with_credentials' do
+    before do
+      @user = User.create(
+        email: 'test@test.com',
+        password: 'password',
+        password_confirmation: 'password',
+        first_name: 'Adam',
+        last_name: 'McPHEE'
+      )
+    end
+
+    it 'returns an instance of the user if successfully authenticated' do
+      user = User.authenticate_with_credentials('test@test.com', 'password')
+      expect(user).to eq(@user)
+    end
+
+    it 'returns nil if not successfully authenticated' do
+      user = User.authenticate_with_credentials('test@test.com', 'blahblah')
+      expect(user).to be_nil
+    end
+
+    it 'strips leading and trailing whitespaces from the email' do
+      user = User.authenticate_with_credentials(' test@test.com ', 'password')
+      expect(user).to eq(@user)
+    end
+
+    it 'ignores case sensitivity in email' do
+      user = User.authenticate_with_credentials('TEST@test.com', 'password')
+      expect(user).to eq(@user)
+    end
+  end
 end
