@@ -6,6 +6,12 @@ Rails.application.routes.draw do
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
 
+  get '/signup', to: 'users#new', as: :signup
+  post '/signup', to: 'users#create', as: :users
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
+
   resource :cart, only: [:show] do
     post   :add_item
     post   :remove_item
@@ -18,6 +24,9 @@ Rails.application.routes.draw do
     resources :products, except: [:edit, :update, :show]
     resources :categories, only: [:index, :create, :new]
   end
+
+
+
 
 
 
