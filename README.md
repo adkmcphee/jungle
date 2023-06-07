@@ -1,6 +1,8 @@
 # Jungle
 
-An e-commerce application built with Rails 6.1.
+An e-commerce application built with Rails.
+
+Browse through our vast collection of plants, carefully curated to cater to every plant lover, whether you're a seasoned green thumb or just starting your plant journey. From stunning succulents to majestic monstera, we have a wide variety of plant species to suit your unique style and preferences.
 
 ## Setup
 
