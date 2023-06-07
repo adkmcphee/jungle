@@ -10,6 +10,12 @@ An e-commerce application built with Rails 6.1.
 4. Put Stripe (test) keys into appropriate .env vars
 5. Run `bin/rails s -b 0.0.0.0` to start the server
 
+## Screenshots
+
+![Home Page](https://github.com/adkmcphee/jungle/blob/master/public/images/Screen%20Shot%202023-06-07%20at%203.10.00%20PM.png)
+![View of products](https://github.com/adkmcphee/jungle/blob/master/public/images/Screen%20Shot%202023-06-07%20at%203.10.14%20PM.png)
+
+
 ## Dependencies
 
 - Rails 6.1 [Rails Guide](http://guides.rubyonrails.org/v6.1/)
